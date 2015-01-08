@@ -8,11 +8,11 @@ class Config {
 	public static $Database = "ideasr_schgoogle";
 	
 	//URLs
-	public static $URL = "http://in.schoolneuron.com/";
-	public static $base_url = "http://in.schoolneuron.com/home/";
-	public static $js_url = "http://in.schoolneuron.com/home/";
-	public static $css_url = "http://in.schoolneuron.com/home/";
-	public static $images_url = "http://in.schoolneuron.com/home/";
+	public static $URL = "http://new.local/kitkat/";
+	public static $base_url = "http://new.local/kitkat/";
+	public static $js_url = "http://new.local/kitkat/";
+	public static $css_url = "http://new.local/kitkat/";
+	public static $images_url = "http://new.local/kitkat/";
 
 	//Defaults
 	public static $defaultController = "main";

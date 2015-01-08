@@ -2,6 +2,7 @@
 </body>
 
 <script type="text/javascript" src="<?php echo Config::$URL; ?>static/js/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo Config::$URL; ?>static/js/app.min.js"></script>
 <script type="text/javascript" src="<?php echo Config::$URL; ?>static/js/components/scrollToView.js"></script>
 <script type="text/javascript" src="<?php echo Config::$URL; ?>static/js/components/ui.js"></script>
 <script type="text/javascript">
