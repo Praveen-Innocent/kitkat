@@ -30,6 +30,18 @@ class Sample extends Controller {
 		$template = $this->loadView('plugin');
 		$template->render();
 	}
+
+	function urlparam($state,$id)
+	{
+		//Loading Plugins
+		
+		
+		
+		$template = $this->loadView('sample');
+		$string = $state." ID: ".$id;
+		$template->set('name', $string);
+		$template->render();
+	}
     
 }
 

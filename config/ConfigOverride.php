@@ -10,10 +10,10 @@ class ConfigOverride {
 		Config :: $Database = 'schoolneuron';
 		
 		//URLs
-		Config :: $URL = 'http://localhost/QuickSilver/';
-		Config :: $js_url = 'http://localhost/QuickSilver/js/';
-		Config :: $css_url = 'http://localhost/QuickSilver/css/';
-		Config :: $images_url = 'http://localhost/QuickSilver/css/';
+		Config :: $URL = 'http://localhost/kitkat/';
+		Config :: $js_url = 'http://localhost/kitkat/js/';
+		Config :: $css_url = 'http://localhost/kitkat/css/';
+		Config :: $images_url = 'http://localhost/kitkat/css/';
 	}
 	
 	

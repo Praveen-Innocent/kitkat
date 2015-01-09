@@ -3,14 +3,13 @@
 MVC Architecture
 SEO friendly routing
 Config and overrides
-
+Grunt
 
 
 //TO DO
 Caching
 Helpers
 Package Building
-Grunt
 Linting
 View templating
 AJAX Utils
