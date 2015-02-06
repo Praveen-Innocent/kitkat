@@ -1,0 +1,21 @@
+#!/bin/bash -e
+
+function die() {
+        echo "Error: $1" >&2
+        exit 1
+}
+
+function logmsg() {
+        echo "[`date`] $*"
+}
+
+
+logmsg "creating deb directories"
+mkdir -p www
+logmsg "directory created"
+logmsg "Copying files.."
+cp -R code/* www
+logmsg "copied"
+logmsg "creating deb"
+dpkg-deb --build www
+logmsg "Done!"
