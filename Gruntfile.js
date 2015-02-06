@@ -2,14 +2,14 @@ module.exports = function(grunt) {
   grunt.initConfig({
     uglify: {
       build: {
-        src: ['static/js/app.js'],
-        dest: 'static/js/app.min.js'
+        src: ['code/static/js/app.js'],
+        dest: 'code/static/js/app.min.js'
       }
     },
     cssmin: {
       combine: {
           files: {
-            'static/css/pack.min.css': ['static/css/pack.css']
+            'code/static/css/pack.min.css': ['code/static/css/pack.css']
           }
       }
     },
@@ -22,13 +22,13 @@ module.exports = function(grunt) {
         },
         files: {
           // target.css file: source.less file
-          "static/css/pack.css": "static/less/styles.less"
+          "code/static/css/pack.css": "code/static/less/styles.less"
         }
       }
     },
     watch: {
       styles: {
-        files: ['static/less/*.less','static/js/*.js'], // which files to watch
+        files: ['code/static/less/*.less','code/static/js/*.js'], // which files to watch
         tasks: ['less','uglify','cssmin'],
         options: {
           livereload : 9090,

@@ -10,8 +10,8 @@ class ConfigOverride {
 		Config :: $Database = 'schoolneuron';
 		
 		//URLs
-		Config :: $URL = 'http://localhost/kitkat/';
-		Config :: $js_url = 'http://localhost/kitkat/js/';
+		Config :: $URL = 'http://localhost/kitkat/code/';
+		Config :: $js_url = 'http://localhost/kitkat/code/static/js/';
 		Config :: $css_url = 'http://localhost/kitkat/css/';
 		Config :: $images_url = 'http://localhost/kitkat/css/';
 	}
