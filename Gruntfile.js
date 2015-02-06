@@ -11,8 +11,12 @@ module.exports = function(grunt) {
     clean: {
       build: {
         src: [ 'www' ]
+      },
+      stylesheets: {
+        src: [ 'www/static/less' ]
       }
     },
+    
     uglify: {
       build: {
         src: ['code/static/js/app.js'],
@@ -59,5 +63,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('build', 'Compiles all of the assets and copies the files to the build directory.', [ 'clean:build', 'copy' ]);
+  grunt.registerTask('build', 'Compiles all of the assets and copies the files to the build directory.', [ 'clean:build', 'copy','clean:stylesheets' ]);
   };
