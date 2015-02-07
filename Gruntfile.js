@@ -16,7 +16,13 @@ module.exports = function(grunt) {
         src: [ 'www/static/less' ]
       }
     },
-    
+    jshint: {
+        // You get to make the name
+      // The paths tell JSHint which files to validate
+      all: ['code/static/js/app.js']
+      
+      
+    },
     uglify: {
       build: {
         src: ['code/static/js/app.js'],
@@ -57,11 +63,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
 
+  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('build', 'Compiles all of the assets and copies the files to the build directory.', [ 'clean:build', 'copy','clean:stylesheets' ]);
+  grunt.registerTask('build', 'Compiles all of the assets and copies the files to the build directory.', [ 'clean:build', 'jshint','copy','clean:stylesheets' ]);
   };
