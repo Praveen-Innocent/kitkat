@@ -32,7 +32,7 @@ module.exports = function(grunt) {
     cssmin: {
       combine: {
           files: {
-            'code/static/css/pack.min.css': ['code/static/css/pack.css']
+            'www/static/css/pack.min.css': ['www/static/css/pack.css']
           }
       }
     },
@@ -52,7 +52,7 @@ module.exports = function(grunt) {
     watch: {
       styles: {
         files: ['code/static/less/*.less','code/static/js/*.js'], // which files to watch
-        tasks: ['less','uglify','cssmin'],
+        tasks: ['less','uglify'],
         options: {
           livereload : 9090,
           nospawn: true
@@ -70,5 +70,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('build', 'Compiles all of the assets and copies the files to the build directory.', [ 'clean:build', 'jshint','copy','clean:stylesheets' ]);
+  grunt.registerTask('build', 'Compiles all of the assets and copies the files to the build directory.', [ 'clean:build', 'jshint','copy','cssmin','clean:stylesheets' ]);
   };
