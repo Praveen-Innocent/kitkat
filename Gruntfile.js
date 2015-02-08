@@ -16,6 +16,14 @@ module.exports = function(grunt) {
         src: [ 'www/static/less' ]
       }
     },
+    csslint: {
+      lax: {
+        options: {
+          import: false
+        },
+        src: ['code/static/css/pack.css']
+      }
+    },
     jshint: {
         // You get to make the name
       // The paths tell JSHint which files to validate
@@ -60,15 +68,16 @@ module.exports = function(grunt) {
       }
     }
   });
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-csslint');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
-
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-watch');
+ 
 
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('build', 'Compiles all of the assets and copies the files to the build directory.', [ 'clean:build', 'jshint','copy','cssmin','clean:stylesheets' ]);
+  grunt.registerTask('build', 'Compiles all of the assets and copies the files to the build directory.', [ 'clean:build', 'jshint','csslint','copy','cssmin','clean:stylesheets' ]);
   };

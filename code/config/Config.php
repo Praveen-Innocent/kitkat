@@ -8,7 +8,7 @@ class Config {
 	public static $Database = "ideasr_schgoogle";
 	
 	//URLs
-	public static $URL = "http://new.local/kitkat/";
+	public static $URL = "http://new.local/kitkat/code/";
 	public static $base_url = "http://new.local/kitkat/";
 	public static $js_url = "http://new.local/kitkat/";
 	public static $css_url = "http://new.local/kitkat/";
