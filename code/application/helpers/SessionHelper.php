@@ -1,6 +1,6 @@
 <?php
 
-class Session_helper {
+class SessionHelper {
 
 	function set($key, $val)
 	{

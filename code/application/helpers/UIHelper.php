@@ -1,6 +1,6 @@
 <?php
 
-class Url_helper {
+class UIHelper {
 
 	
 	
