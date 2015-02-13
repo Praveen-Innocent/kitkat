@@ -1,4 +1,5 @@
 module.exports = function(grunt) {
+  var mozjpeg = require('imagemin-mozjpeg');
   grunt.initConfig({
     copy: {
       build: {
@@ -44,6 +45,16 @@ module.exports = function(grunt) {
           }
       }
     },
+    imagemin: {                          // Task
+    dynamic: {                         // Another target
+      files: [{
+        expand: true,                  // Enable dynamic expansion
+        cwd: 'code/static/images',                   // Src matches are relative to this path
+        src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
+        dest: 'www/static/images'                  // Destination path prefix
+      }]
+    }
+  },
     less: {
       development: {
         options: {
@@ -76,8 +87,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
  
 
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('build', 'Compiles all of the assets and copies the files to the build directory.', [ 'clean:build', 'jshint','csslint','copy','cssmin','clean:stylesheets' ]);
+  grunt.registerTask('build', 'Compiles all of the assets and copies the files to the build directory.', [ 'clean:build', 'jshint','csslint','copy','cssmin','imagemin','clean:stylesheets' ]);
   };
