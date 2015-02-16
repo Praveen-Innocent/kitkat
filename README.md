@@ -1,7 +1,12 @@
 # kitkat
 PHP Kitkat, Quick starter MVC framework
 
+> MVC Architecture
+> Helper Classes
+> Plugins
+
 #Build package using grunt
  > CSS and JS Lint
  > Image Minification
- > Remove less files from final build
+ > Combine and minify css
+ > Remove less and dev files from final build
